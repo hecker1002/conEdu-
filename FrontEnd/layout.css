@@ -58,9 +58,3 @@ body{
 .banner .info a:hover{
 	background: #09a43f;
 }
-
-body{
-	overflow:scroll;
-height:100px;
-width:200px;
-}
