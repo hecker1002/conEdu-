@@ -10,6 +10,7 @@ const passport = require('passport');
 router.get('/register', (req,res)=>{res.render("../views/register.ejs")});
 router.get('/login', (req,res)=>{res.render("../views/login.ejs")});
 router.get('/choice', (req,res)=>{res.render("../views/choice.ejs")});
+router.get('/createhack', (req,res)=>{res.render("../views/createhack.ejs")});
 
 
 
