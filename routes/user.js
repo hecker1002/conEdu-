@@ -5,9 +5,14 @@ const bcrypt = require('bcryptjs');
 const passport = require('passport');
 // const { forwardAuthenticated } = require('../config/auth');
 
+// This helps us to know which files(pages) at which route (middleware)
 
 router.get('/register', (req,res)=>{res.render("../views/register.ejs")});
 router.get('/login', (req,res)=>{res.render("../views/login.ejs")});
+router.get('/choice', (req,res)=>{res.render("../views/choice.ejs")});
+
+
+
 router.post('/register/formation', (req,res)=>{
     const {name, email, password, password2} = req.body;
     let errors = [];
