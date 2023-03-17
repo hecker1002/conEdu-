@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MCQ Test Page</title>
+    <style>
+      /* Style the form elements */
+      form label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      form input[type="text"],
+      form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+      }
+
+      form select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+      }
+
+      form input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      form input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      /* Style the question and options elements */
+      .question {
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .options {
+        margin-bottom: 20px;
+      }
+
+      /* Style the correct answer element */
+      .correct {
+        color: green;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>MCQ Test Page</h1>
+
+    <form method="POST" action="/submit">
+      <div class="inputs" id="inputsID">
+        <label for="question">Question:</label>
+        <input type="text" id="question" name="question" required />
+
+        <label for="option1">Option 1:</label>
+        <input type="text" id="option1" name="option1" required />
+
+        <label for="option2">Option 2:</label>
+        <input type="text" id="option2" name="option2" required />
+       
+
+      </div>
+      <label for="correct">Correct answer:</label>
+      <select id="correct" name="correct" required>
+        <div class="options">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+        </div>
+      </select>
+
+      <input type="submit" value="Submit" />
+    </form>
+    <button class="add-input">Add one more input</button>
+    <!-- <form action="." method="GET">
+        <div class="inputs">
+            <input type="text" name="text[]">
+        </div>
+        
+        <input type="submit" value="submit">
+    </form> -->
+    <script>
+        const addButton = document.querySelector('button.add-input')
+
+        const inputDiv = document.querySelector('form .inputs')
+        const optionDiv = document.querySelector('select .options')
+        let value = 3;
+        addButton.addEventListener('click', ()=>{                     // button to add the inputs
+            let newInput = document.createElement('input')
+            let newlabel  = document.createElement('label')
+            let newoption = document.createElement('option')
+            newInput.name = `option${value}` // add the name of the input
+            newInput.type = 'text' // add the type of the input
+            newInput.id = `option${value}`
+            newInput.required = true;
+            // var  div_form_group= document.createElement('div');
+            // div_form_group.setAttribute('class','col-sm-5');
+
+
+            newlabel.setAttribute('for',`option${value}`)
+            newoption.value = value
+            
+            console.log(value)
+            value+=1;
+            // div_form_group.appendChild( newlabel );
+
+            // you can add other attributes before appeding the node into the html
+
+            document.inputDiv.appendChild(newlabel)
+            // ('#inputsID').append('<div>cfgfdgcf</div>')
+            inputDiv.appendChild(newInput)
+            optionDiv.appendChild(3)
+            
+        })
+
+    </script>
+    <body\> 
+
+</html>
