@@ -1,4 +1,38 @@
-div {
-    position:relative
+.body_1 {
+    display: flex;
     
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: fantasy;
+}
+.btn_1 {
+    padding: 12px 24px;
+    margin: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 100px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+.btn_1:active {
+    background-color: #126547;
+    box-shadow: 0 3px 0 #0e7535;
+    transform: translateY(2px);
+  }
+.body_2{
+    background:url('blackboard.jpg'),url('blackboard.jpg');
+	background-position: top;
+	background-size:cover;
+	
+	background-repeat: no-repeat;
 }
