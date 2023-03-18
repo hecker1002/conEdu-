@@ -13,6 +13,7 @@ router.get('/login', (req,res)=>{res.render("../views/login.ejs")});
 router.get('/choice', (req,res)=>{res.render("../views/choice.ejs")});
 
 
+
 router.get('/createhack', (req,res)=>{res.render("../views/createhack.ejs")});
 router.get('/hackit', async (req,res)=> {
     console.log('entered')
