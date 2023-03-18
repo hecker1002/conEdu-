@@ -1,12 +1,21 @@
 const express = require('express');
 const cors = require('cors');
-const monk = require('monk');
+const mongoose = require('mongoose');
+// const monk = require('monk');
 const Filter = require('bad-words');
 const rateLimit = require('express-rate-limit');
 
+
 const app = express();
 
-const db = monk(process.env.MONGO_URI || 'localhost/meower');
+const db = mongoose.connect('mongodb://riziuzi:WnE1DaTHwguTL5tP@ac-uecxoww-shard-00-00.ulcokkb.mongodb.net:27017,ac-uecxoww-shard-00-01.ulcokkb.mongodb.net:27017,ac-uecxoww-shard-00-02.ulcokkb.mongodb.net:27017/?ssl=true&replicaSet=atlas-zb4d21-shard-0&authSource=admin&retryWrites=true&w=majority' , {useNewUrlParser : true})
+.then(()=>{console.log("mongo conn")}).catch(err=>console.log(err));
+
+console.log(db)
+
+
+
+
 const mews = db.get('mews');
 const filter = new Filter();
 
@@ -14,6 +23,9 @@ app.enable('trust proxy');
 
 app.use(cors());
 app.use(express.json());
+app.listen(db , ()=>{
+    console.log("OK")
+})
 
 app.get('/', (req, res) => {
   res.json({
