@@ -78,3 +78,13 @@ body{
     border: none;
     cursor: pointer;
 }
+
+
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 85px;
+
+}
