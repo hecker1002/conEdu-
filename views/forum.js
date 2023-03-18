@@ -54,38 +54,7 @@ form.addEventListener('submit', (event) => {
       content
     };
     
-    fetch(API_URL, {
-      method: 'POST',
-      body: JSON.stringify(mew),
-      headers: {
-        'content-type': 'application/json'
-      }
-    }).then(response => {      
-      if (!response.ok) {
-        const contentType = response.headers.get('content-type');
-        if (contentType.includes('json')) {
-          return response.json().then(error => Promise.reject(error.message));
-        } else {
-          return response.text().then(message => Promise.reject(message));
-        }
-      }
-    }).then(() => {
-      form.reset();
-      setTimeout(() => {
-        form.style.display = '';
-      }, 30000);
-      listAllMews();
-    }).catch(errorMessage => {
-      form.style.display = '';
-      errorElement.textContent = errorMessage;
-      errorElement.style.display = '';
-      loadingElement.style.display = 'none';
-    });
-  } else {
-    errorElement.textContent = 'Name and content are required!';
-    errorElement.style.display = '';
-  }
-});
+    
 
 
 }

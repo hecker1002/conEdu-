@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css">
+<style>
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0px 3px 3px rgba(0,0,0,0.2);
+  }
+
+  h2 {
+    margin-top: 0;
+    color:black;
+  }
+  #nm {
+    color: black;
+  }
+
+  small {
+    color: #999;
+    font-style: italic;
+  }
+</style>
+
+<div class="container">
+  <h1 class="mt-3">Recent talks</h1>
+  <div class="container-fluid banners">
+      <div class="col-md-12">
+        <nav class="navbar navbar-md">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/"><b>Home</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><b>For Students</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/user/login" target="_blank"><b>Login</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="/user/register"><b>Register</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  href="/user/forum"><b>Your TalkDesk</b></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  <ul class="mt-3">
+    <% forum.forEach(f => { %>
+    <li>
+        <h2 class="mt-3"><%= f.content %></h2>
+        <div id="nm"><h6 class="text-primary">by <%= f.name %></h6></div>
+        <small>Created at <%= f.date %></small>
+      </a>
+    </li>
+    <% }) %>
+  </ul>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
