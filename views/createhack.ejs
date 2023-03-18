@@ -1,0 +1,50 @@
+<h1>MCQ Test Page</h1>
+
+<form method="POST" action="/user/createhack">
+  <div class="inputs" id="inputsID">
+    <label for="question">Question:</label>
+    <input type="text" id="question" name="question" required />
+
+    <label for="option1">Option 1:</label>
+    <input type="text" id="option1" name="option1" required />
+
+    <label for="option2">Option 2:</label>
+    <input type="text" id="option2" name="option2" required />
+  </div>
+  <label for="correct">Correct answer:</label>
+  <select id="correct" name="correct" required>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+  </select>
+
+  <input type="submit" value="Submit" />
+</form>
+<button class="add-input">Add one more input</button>
+
+<script>
+  const addButton = document.querySelector("button.add-input");
+
+  const inputDiv = document.querySelector("form .inputs");
+  const optionDiv = document.querySelector("select .options");
+  let value = 3;
+  addButton.addEventListener("click", () => {
+    // button to add the inputs
+    const myinp = document.getElementById("inputsID");
+    const myopt = document.getElementById("correct");
+
+    const newinp = document.createElement("div");
+    const newOption = document.createElement("option");
+
+    newinp.innerHTML = `<label for="option${value}">Option ${value}:</label><input type="text" id="option${value}" name="option${value}" required />`;
+    newOption.innerHTML = `Option ${value}`;
+
+    newOption.setAttribute("value", `${value}`);
+
+    myinp.appendChild(newinp);
+    myopt.appendChild(newOption);
+    // myopt.innerHTML = `<option value="option${value}">Option ${value}</option>`;     // This wont work, as this will erase all the previous innerhtml content. So we need to create manually an option
+
+    value += 1;
+  });
+</script>
+<body\> </body\>

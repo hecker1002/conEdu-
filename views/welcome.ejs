@@ -1,3 +1,18 @@
+
+<script>
+
+const myTimeout = setTimeout(myGreeting, 5000);
+
+function myGreeting() {
+ 
+  document.getElementsByClassName('alert alert-warning alert-dismissible fade show')[0].style.display= 'block'
+}
+</script>
+<div class="alert alert-warning alert-dismissible fade show" id="p_1"role="alert" style="display:none">
+  <strong>Hola amigos!</strong> Wanna Know More <a href="https://www.livescience.com/news" target="_blank"> Dive Here !</a>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
 <div class="container-fluid banner">
   <div class="row">
     <div class="col-md-12">
@@ -26,3 +41,5 @@
     </div>
   </div>
 </div>
+
+

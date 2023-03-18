@@ -19,23 +19,6 @@ const UserSchema = mongoose.Schema({
     },
 });
 
-const questionSchema = new mongoose.Schema({
-	question: {
-		type: String,
-		required: true
-	},
-	options: {
-		type: [String],
-		required: true
-	},
-	correct: {
-		type: String,
-		required: true
-	}
-});
-
 const User = mongoose.model('User', UserSchema);
-const Question = mongoose.model('Question', questionSchema);
 
 module.exports = User;
-module.exports = Question;

@@ -1,0 +1,54 @@
+/* Style the form elements */
+form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  form input[type="text"],
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  form input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  form input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  /* Style the question and options elements */
+  .question {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+
+  .options {
+    margin-bottom: 20px;
+  }
+
+  /* Style the correct answer element */
+  .correct {
+    color: green;
+    font-weight: bold;
+  }
