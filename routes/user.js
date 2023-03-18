@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const User = require('../module/User');
+const Forum = require('../module/Forum');
 const Question = require('../module/Question')
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
@@ -8,12 +9,11 @@ const passport = require('passport');
 
 // This helps us to know which files(pages) at which route (middleware)
 
+router.get('/forum', (req,res)=>{res.render("../views/forum.ejs")})
 router.get('/register', (req,res)=>{res.render("../views/register.ejs")});
 router.get('/login', (req,res)=>{res.render("../views/login.ejs")});
 router.get('/choice', (req,res)=>{res.render("../views/choice.ejs")});
 router.get('/hackit/:id', async (req, res) => {
-
-
     try {
       const question = await Question.findById(req.params.id);
       res.render('../views/mcq.ejs', {
@@ -25,8 +25,6 @@ router.get('/hackit/:id', async (req, res) => {
       res.status(500).send('Internal Server Error');
     }
   });
-  
-
 router.get('/createhack', (req,res)=>{res.render("../views/createhack.ejs")});
 router.get('/hackit', async (req,res)=> {
     console.log('entered')
@@ -40,6 +38,18 @@ router.get('/hackit', async (req,res)=> {
         res.status(500).send('Internal Server Error');
     }
     })
+router.get('/yourtalkdesk', async (req,res)=> {
+    console.log('entered')
+    try{
+        const forum = await Forum.find().sort({ createdAt: 'desc' });
+        console.log('entered2')
+        res.render("../views/yourtalkdesk.ejs", { forum })
+    }
+    catch(err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
+})
 
       
     // router.post('/check-answer', async (req, res) => {
@@ -61,7 +71,23 @@ router.get('/hackit', async (req,res)=> {
     //     // }
     //   });
 
-
+router.post('/forum', (req, res) => {
+    console.log(req.body)
+    // Extract form data from the request
+    const formData = req.body;
+    // Create a new Form instance using the model
+    const form = new Forum({
+      name : formData.name,
+      content : formData.content
+    });
+  
+    // Save the form data to MongoDB
+    form.save()
+    .then(user => {
+        res.redirect('/user/yourtalkdesk');
+    })
+    .catch(err=>{console.log(err)});
+});
 
 router.post('/check-answer/:id', async (req, res) => {
     console.log(req.body);

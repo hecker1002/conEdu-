@@ -8,12 +8,13 @@ function myGreeting() {
   document.getElementsByClassName('alert alert-warning alert-dismissible fade show')[0].style.display= 'block'
 }
 </script>
-<div class="alert alert-warning alert-dismissible fade show" id="p_1"role="alert" style="display:none">
-  <strong>Hola amigos!</strong> Wanna Know More <a href="https://www.livescience.com/news" target="_blank"> Dive Here !</a>
-  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
+
 
 <div class="container-fluid banner">
+  <div class="alert alert-warning alert-dismissible fade show" id="p_1"role="alert" style="display:none">
+    <strong>Hola amigos!</strong> Wanna Know More <a href="https://www.livescience.com/news" target="_blank"> Dive Here !</a>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
     <strong>Holy guacamole!</strong> You should check in on some of those fields below.
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -36,6 +37,7 @@ function myGreeting() {
           </li>
           <li class="nav-item">
             <button style="background-color: green;"><a class="nav-link"  href="/user/forum"><b>Your TalkDesk</b></a></button>
+            <a class="nav-link"  href="/user/yourtalkdesk"><b>Your TalkDesk</b></a>
           </li>
         </ul>
       </nav>
