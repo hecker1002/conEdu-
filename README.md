@@ -37,6 +37,7 @@ Another way to keep students engaged is to provide them with an activity corner.
 
 This will give students a chance to explore new topics and expand their knowledge in areas they may not have considered before.
 
+
 ## 🔔 Pop-Ups
 
 To capture students' attention and keep them engaged, we plan to incorporate pop-ups. These can be used to provide students with helpful tips, fun facts, or reminders about upcoming activities or assignments.

@@ -1,3 +1,18 @@
+
+<script>
+
+const myTimeout = setTimeout(myGreeting, 5000);
+
+function myGreeting() {
+ 
+  document.getElementsByClassName('alert alert-warning alert-dismissible fade show')[0].style.display= 'block'
+}
+</script>
+<div class="alert alert-warning alert-dismissible fade show" id="p_1"role="alert" style="display:none">
+  <strong>Hola amigos!</strong> Wanna Know More <a href="https://www.livescience.com/news" target="_blank"> Dive Here !</a>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
 <div class="container-fluid banner">
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
     <strong>Holy guacamole!</strong> You should check in on some of those fields below.
@@ -8,10 +23,10 @@
       <nav class="navbar navbar-md">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="#"><b>Home</b></a>
+            <a class="nav-link" href="."><b>Home</b></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><b>Your Corner</b></a>
+            <a class="nav-link" href="#"><b>For Students</b></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="user/login" target="_blank"><b>Login</b></a>
@@ -30,3 +45,5 @@
     </div>
   </div>
 </div>
+
+

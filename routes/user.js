@@ -11,11 +11,14 @@ const passport = require('passport');
 router.get('/register', (req,res)=>{res.render("../views/register.ejs")});
 router.get('/login', (req,res)=>{res.render("../views/login.ejs")});
 router.get('/choice', (req,res)=>{res.render("../views/choice.ejs")});
+
+
 router.get('/createhack', (req,res)=>{res.render("../views/createhack.ejs")});
 router.get('/hackit', async (req,res)=> {
     console.log('entered')
     try{
         const question = await Question.find().sort({ createdAt: 'desc' });
+        console.log('entered2')
         res.render("../views/hackit.ejs", { question })
     }
     catch(err) {
