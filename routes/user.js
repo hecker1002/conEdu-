@@ -11,15 +11,14 @@ const passport = require('passport');
 router.get('/register', (req,res)=>{res.render("../views/register.ejs")});
 router.get('/login', (req,res)=>{res.render("../views/login.ejs")});
 router.get('/choice', (req,res)=>{res.render("../views/choice.ejs")});
-<<<<<<< HEAD
-router.get('/popup', (req,res)=>{res.render("../views/popup.ejs")});
 
-=======
+
 router.get('/createhack', (req,res)=>{res.render("../views/createhack.ejs")});
 router.get('/hackit', async (req,res)=> {
     console.log('entered')
     try{
         const question = await Question.find().sort({ createdAt: 'desc' });
+        console.log('entered2')
         res.render("../views/hackit.ejs", { question })
     }
     catch(err) {
@@ -27,7 +26,6 @@ router.get('/hackit', async (req,res)=> {
         res.status(500).send('Internal Server Error');
     }
     })
->>>>>>> 787f285770183d902ef543d2518b1c3ad392aebd
 
 router.get('/hackit/:id', async (req, res) => {
     try {
