@@ -8,7 +8,7 @@
     color: white;
     border-radius: 10px;
     padding: 10px;
-    width:58.5vw;
+    width:100%;
   }
 
   .mew-form,
@@ -51,23 +51,30 @@
   }
 </style>
 <header>
-  <h1 class="title">MyEdu` &#9997;</h1>
+  <h1 class="title" style="color:aliceblue"><strong>MyEdu` </strong>&#9997;</h1>
 </header>
+<p></p>
+<p></p>
 <main>
-  <form action="/user/forum" method="POST">
-    <div class="error-message"></div>
-    <label for="name">Your Name </label>
-    <input class="u-full-width" type="text" id="name" name="name" style="width:120vh"/>
-    <label for="content">What You wanna Post ? </label>
+  <div class="form-center">
+  <form action="/user/forum" method="POST" style="text-align: center;">
+    <div class="error-message"></div><p></p>
+    <label for="name"style="color:aliceblue">Your Name </label>
+    <input class="u-full-width" type="text" id="name" name="name" style="width:135vh"/>
+    <label for="content" style="color:aliceblue">What You wanna Post ? </label>
     <textarea
       class="u-full-width"
       type="text"
       id="content"
       name="content"
       style="width:120vh"
+      rows="10"
+      cols="15"
     ></textarea>
-    <button class="button-primary">Post It !</button>
+    <p></p> <p></p>
+    <button class="button-primary" style="background-color: rgb(119, 183, 252); color:rgb(43, 40, 40); font-size:20px;"><b>Post It !<b></b></button>
   </form>
+</div>
   <div class="mews"></div>
   <div class="button-container">
     <p id="loadMore">Loading...</p>
