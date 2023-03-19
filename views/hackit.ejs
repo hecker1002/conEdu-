@@ -63,18 +63,23 @@
     </nav>
   </div>
 </div>
-    <h1 class="mt-3">Recent Questions</h1>
-
-    <ul class="mt-3" style="color:whitesmoke">
-      <% question.forEach(q => { %>
-      <li>
-        <a href="/user/hackit/<%= q._id %>" class="text-decoration-none">
-          <h2 class="text-primary" style="color:whitesmoke"><%= q.data.question %></h2>
-          <small>Created at <%= q.date %></small>
-        </a>
-      </li>
-      <% }) %>
-    </ul>
+    
+  <div class="row mt-3">
+    <% question.forEach(q => { %>
+    <div class="col-md-12 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <h2 class="card-title" style="color: black;"><%= q.data.question %></h2>
+    
+          <p class="card-text"><small class="text-muted">Created at <%= q.date %></small></p>
+        </div>
+      </div>
+    </div>
+    <% }) %>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+
+
+
+
