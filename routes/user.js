@@ -120,12 +120,12 @@ router.post('/check-answer/:id', async (req, res) => {
         // check if the user's answer matches the correct answer
         if (userAnswer === question.data[`${question.data.correct}`]) {
 
-            await client.connect();
+            // await client.connect();
 
-            const collection = client.db('mydatabase').collection('mycollection');
-            const newsolver = { ...solver, score : solver.score+10,}
-            // console.log(newsolver.score)
-            const result = await collection.updateOne(solverId , { $set: newsolver });
+            // const collection = client.db('mydatabase').collection('mycollection');
+            // const newsolver = { ...solver, score : solver.score+10,}
+            // // console.log(newsolver.score)
+            // const result = await collection.updateOne(solverId , { $set: newsolver });
 
             res.render('../views/mcq.ejs',{
                 question: question,
