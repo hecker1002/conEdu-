@@ -37,7 +37,7 @@ app.use(express.static(__dirname + '/public'));
 // Express session - something to do with converting of user Object to a serialized ID(?), which will maintain throughout the session
 app.use(session({
     secret: 'secret',
-    resave: true,
+    resave: false,
     saveUninitialized: true
   })
 );
@@ -51,12 +51,13 @@ app.use(passport.session());
 // Connecting the FLASH
 app.use(flash());
 // Global variables
-app.use(function(req, res, next) {
-    res.locals.success_msg = req.flash('success_msg');
-    res.locals.error_msg = req.flash('error_msg');
-    res.locals.error = req.flash('error');
-    next();
-  });
+// app.use(function(req, res, next) {
+//     res.locals.success_msg = req.flash('success_msg');
+//     res.locals.error_msg = req.flash('error_msg');
+//     res.locals.message = req.flash();
+//     res.locals.error = req.flash('error');
+//     next();
+//   });
 
 
 

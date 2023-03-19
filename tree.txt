@@ -1,0 +1,56 @@
+Folder PATH listing for volume Acer
+Volume serial number is 872D-5C60
+C:.
+ª   .env
+ª   .gitignore
+ª   app.js
+ª   package-lock.json
+ª   package.json
+ª   README.md
+ª   server.js
+ª   tree.txt
+ª   
++---config
+ª       auth.js
+ª       keys.js
+ª       passport.js
+ª       secret.txt
+ª       
++---module
+ª       Forum.js
+ª       Question.js
+ª       User.js
+ª               
++---public
+ª       blackboard.jpg
+ª       choice.css
+ª       conEdu`.png
+ª       createhack.css
+ª       layout.css
+ª       Loading.gif
+ª       
++---routes
+ª       index.js
+ª       user.js
+ª       
++---views
+    ª   choice.ejs
+    ª   createhack.ejs
+    ª   dashboard.ejs
+    ª   forum.css
+    ª   forum.ejs
+    ª   forum.js
+    ª   hackit.ejs
+    ª   layout.ejs
+    ª   login.ejs
+    ª   mcq.ejs
+    ª   register.ejs
+    ª   register.js
+    ª   welcome.ejs
+    ª   yourtalkdesk.ejs
+    ª   
+    +---partials
+            answer.ejs
+            messages.ejs
+            message_createhack.ejs
+            

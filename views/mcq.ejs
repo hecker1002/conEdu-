@@ -1,24 +1,21 @@
 <div class="container">
-    <h1 class="text-center mb-4">Can you Hack it!</h1>
-
-    
-    <form method="POST" action="/user/check-answer/<%= question.id %>">
-      <input type="hidden" name="questionId" value="<%= question._id %>">
-      <%- include ("./partials/answer"); %>
-      <% for(var i=0; i<1; i++) { %>
-        <div class="card mb-3">
-          <div class="card-body">
-            <p><%= question.data.question %></p>
-            <% for(var j=1; j<=Object.keys(question.data).length-2; j++) { %>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="answer" id="<%= question.data['option'+j] %>" value="<%= question.data['option'+j] %>">
-                <label class="form-check-label" for="<%= question.data['option'+j] %>"><%= question.data['option'+j] %></label>
-              </div>
-            <% } %>
-          </div>
+  <h1 class="text-center mb-4">🕵️‍♂️ Can you Hack it! 🕵️‍♀️</h1>
+  <form method="POST" action="/user/check-answer/<%= question.id %>">
+    <input type="hidden" name="questionId" value="<%= question._id %>">
+    <%- include ("./partials/answer"); %>
+    <% for(var i=0; i<1; i++) { %>
+      <div class="card mb-3">
+        <div class="card-body">
+          <p><%= question.data.question %></p>
+          <% for(var j=1; j<=Object.keys(question.data).length-2; j++) { %>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="answer" id="<%= question.data['option'+j] %>" value="<%= question.data['option'+j] %>">
+              <label class="form-check-label" for="<%= question.data['option'+j] %>"><%= question.data['option'+j] %> 😎</label>
+            </div>
+          <% } %>
         </div>
-      <% } %>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+      </div>
+    <% } %>
+    <button type="submit" class="btn btn-primary">Submit 🚀</button>
+  </form>
 </div>
-  

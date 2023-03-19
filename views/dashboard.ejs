@@ -1,3 +1,56 @@
-<h1 class="mt-4">Dashboard</h1>
-<p class="lead mb-3">Welcome <%= user.name %></p>
-<a href="/user/logout" class="btn btn-secondary">Logout</a>
+
+
+<div class="container-fluid banner">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert" style="display:none">
+      <strong>Hola amigos!</strong> Wanna Know More <a href="https://www.livescience.com/news" target="_blank">Dive Here!</a>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark" style="z-index: 5;">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="/"><b>ConEdu</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/user/yourtalkdesk">For Students</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="/user/forum">Your TalkDesk</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <%= user.name %>
+                    </a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a class="dropdown-item" style="color: black; margin-left: 7%;" href="/user/profile">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li class="nav-item">
+                            <a class="nav-link" style="color: black; margin-left: 7%;" href="/user/logout_welcome">Logout</a>
+                        </li>
+                    </ul>
+                  </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="col-md-8 offset-md-2 info">
+        <div class="jumbotron">
+          <h1 class="display-4" style="text-align: center; color: black;">Learn with ConEdu</h1>
+          <p class="lead" style="text-align: center; color: black;">We specialize in creating market-driven products that meet the needs of our target audience. Our players are the students who are passionate about their academic portfolios but don't have access to educational content, compensated by those who are interested in learning new things.</p>
+          <hr class="my-4">
+          <p>Start your journey with us and discover new ways to learn!</p>
+          <a class="btn btn-primary btn-lg" href="/user/choice" role="button">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>

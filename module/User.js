@@ -13,10 +13,29 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    date : {
+    datecreated : {
         type: Date,
-        default: Date.now
     },
+    school : {
+        type : String
+    },
+    
+    achievements : {
+        type : String
+    },
+
+    about : {
+        type : String
+    },
+
+    score : {
+        type : Number,
+    },
+
+    dateupdated : {
+        type : Date,
+        default : Date.now
+    }
 });
 
 const User = mongoose.model('User', UserSchema);

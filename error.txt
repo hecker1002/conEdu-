@@ -1,0 +1,26 @@
+passing this in messages.ejs throws error : 
+
+<% if (typeof messages!== 'undefined') { %>
+
+<% if (typeof messages.error!== 'undefined') { %>
+  <% if (messages.error) { %>
+    <div class="alert alert-danger" role="alert">
+      <%= messages.error %>
+    </div>
+  <% } %>  
+<% } %>  
+
+<% if (typeof messages.success!== 'undefined') { %>
+  <% if (messages.success) { %>
+    <div class="alert alert-success" role="alert">
+      <%= messages.success %>
+    </div>
+  <% } %>
+<% } %>
+
+} %>
+
+
+
+
+Unexpected token 'catch' in C:\Users\Nishesh Shukla\VScode\WebDev\spring\hackathon\hackathon_technex\conEdu-\views\partials\messags.ejs while compiling ejs

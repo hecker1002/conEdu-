@@ -1,14 +1,36 @@
+
+@keyframes animatedBackground {
+	from {
+	  background-position: 0 0;
+	}
+	to {
+	  background-position: 100% 0;
+	}
+  }
+  #animate-area {
+	width: 700%;
+	height: 200%;
+	background-image: url('bl.jpg');
+	background-size: 80% 50%;
+	background-position: 500px 500px;
+	background-repeat: repeat-x;
+	animation: animatedBackground 10s linear infinite alternate;
+  }
+
+
 body{
 	margin:0;
 	padding:0;
-	background:#fff;
+	background:#2f2a2a;
+	background-image: url('blackboard.jpg');
+	background-color: black;
 	font-family: 'Raleway',sans-serif;
 	color: #fff;
 }
 .banner{
 	height: 100vh;
 	width: 100vh;
-	background:url('blackboard.jpg'),url('blackboard.jpg');
+	/* background:url('blackboard.jpg'),url('blackboard.jpg'); */
 	background-position: top;
 	background-size:cover;
 	/*background-attachment: fixed;*/
@@ -88,3 +110,38 @@ body{
     font-size: 85px;
 
 }
+
+nav {
+	display: flex;
+	position: absolute;
+    top: 0;
+  }
+
+  nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+  }
+
+  nav li {
+
+	margin-right: 0px;
+	margin-left: 0px;
+  }
+
+  nav a {
+	color: white;
+	text-decoration: none;
+	padding: 5px 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease;
+  }
+
+   a:hover {
+	background-color: #153820;
+	
+  }
+
+  
+

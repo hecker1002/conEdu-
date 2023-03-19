@@ -1,55 +1,14 @@
 <style>
-  .title {
-    text-align: center;
+  .jumbotron, .jumbotron * {
+    color: black;
   }
-
-  .error-message {
-    background: #6ccb4d;
-    color: white;
-    border-radius: 10px;
-    padding: 10px;
-    width:100%;
-  }
-
-  .mew-form,
-  .loading {
-    width: 50%;
-    margin: 0 auto;
-  }
-
-  .loading {
-    text-align: center;
-  }
-
-  .mews {
-    width: 80%;
-    margin: 0 auto;
-  }
-
-  .mews > div {
-    background: hsl(0, 0%, 95%);
-    padding: 12px;
-    border-radius: 4px;
-  }
-
-  .mews > div > h3 {
-    word-wrap: break-word;
-  }
-
-  .mews > div > p {
-    word-wrap: break-word;
-  }
-
-  .mews > div:not(:last-child) {
-    margin-bottom: 8px;
-  }
-
-  .button-container {
-    display: flex;
-    justify-content: center;
-    margin: 1em;
+  .jumbotron h1 {
+    color: black;
   }
 </style>
+
+
+
 <div class="container-fluid banner">
   <div class="alert alert-warning alert-dismissible fade show" role="alert" style="display:none">
     <strong>Hola amigos!</strong> Wanna Know More <a href="https://www.livescience.com/news" target="_blank">Dive Here!</a>
@@ -66,11 +25,11 @@
           <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="/user/yourtalkdesk">For Students</a>
+                <a class="nav-link" href="#">For Students</a>
               </li>
               
               <li class="nav-item">
-                  <a class="nav-link" href="/user/forum">Your TalkDesk</a>
+                  <a class="nav-link" href="/user/yourtalkdesk">Your TalkDesk</a>
               </li>
               <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -90,38 +49,30 @@
         </div>
       </nav>
     </div>
-
-<header>
-  <h1 class="title" style="color:aliceblue"><strong>MyEdu` </strong>&#9997;</h1>
-</header>
-<p></p>
-<p></p>
-<main>
-  <div class="form-center">
-  <form action="/user/forum" method="POST" style="text-align: center;">
-    <div class="error-message"></div><p></p>
-    <label for="name"style="color:aliceblue">Your Name </label>
-    <input class="u-full-width" type="text" id="name" name="name" style="width:135vh"/>
-    <label for="content" style="color:aliceblue">What You wanna Post ? </label>
-    <textarea
-      class="u-full-width"
-      type="text"
-      id="content"
-      name="content"
-      style="width:120vh"
-      rows="10"
-      cols="15"
-    ></textarea>
-    <p></p> <p></p>
-    <button class="button-primary" style="background-color: rgb(119, 183, 252); color:rgb(43, 40, 40); font-size:20px;"><b>Post It !<b></b></button>
-  </form>
+    <div class="col-md-8 offset-md-2 info">
+      <div class="jumbotron">
+        <h1 class="display-4" style="text-align: center; color: black;">Your Profile</h1>
+        <p class="lead" style="text-align: center; color: black;">
+          <br>
+        <div class="container" style="color: black;">
+          <h1 style="color: black;text-align: right;"><%= student.name %></h1>
+          <p><strong>School: <%= student.school %></strong></p>
+          <p><strong>Achievements: <%= student.achievements %></strong></p>
+          <p><strong>About: <%= student.about %></strong></p>
+          <p><strong>Current Score: <%= student.score %></strong></p>
+          <p><strong>Date Created: <%= student.datecreated %></strong></p>
+          <p><strong>Date Updated: <%= student.dateupdated %></strong></p>
+        </div>
+      </p>
+        <a class="btn btn-primary btn-lg" href="/user/choice" role="button">Update</a>
+      </div>
+    </div>
+  </div>
 </div>
-  <div class="mews"></div>
-  <div class="button-container">
-    <p id="loadMore">Loading...</p>
-  </div>
-  <div class="loading" >
-    <img src="/Loading.gif" alt="" />
-  </div>
-</main>
-<script src="./forum.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+
+
+
+  
