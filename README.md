@@ -42,12 +42,68 @@ This will give students a chance to explore new topics and expand their knowledg
 
 To capture students' attention and keep them engaged, we plan to incorporate pop-ups. These can be used to provide students with helpful tips, fun facts, or reminders about upcoming activities or assignments.
 
-## 📄 Documentation
+## 📄 Community Server
 
-To make it easier for coders to work with our platform and for schools to adapt it to their needs, we will provide detailed documentation. This will help to ensure that our platform is accessible and user-friendly for everyone.
+To interact with students, the mentors can use our community server as a dynamic database to post educational content like podcast and documentaries (practical stuffs) for the whole student community.
 
-With these features in mind, we believe that we can create a successful student-driven educational server that meets the needs of our target audience.
+With these features in mind, we believe that we can create a successful <strong>student-driven educational server</strong> that meets the needs of our target audience.
 
+The file structure of our application is : 
+
+```
+├── .env
+├── .gitignore
+├── app.js
+├── package-lock.json
+├── package.json
+├── README.md
+├── server.js
+├── tree.txt
+│
+├── config
+│   ├── auth.js
+│   ├── keys.js
+│   ├── passport.js
+│   └── secret.txt
+│
+├── module
+│   ├── Forum.js
+│   ├── Question.js
+│   └── User.js
+│
+├── public
+│   ├── blackboard.jpg
+│   ├── choice.css
+│   ├── conEdu`.png
+│   ├── createhack.css
+│   ├── layout.css
+│   └── Loading.gif
+│
+├── routes
+│   ├── index.js
+│   └── user.js
+│
+└── views
+    ├── choice.ejs
+    ├── createhack.ejs
+    ├── dashboard.ejs
+    ├── forum.css
+    ├── forum.ejs
+    ├── forum.js
+    ├── hackit.ejs
+    ├── layout.ejs
+    ├── login.ejs
+    ├── mcq.ejs
+    ├── register.ejs
+    ├── register.js
+    ├── welcome.ejs
+    ├── yourtalkdesk.ejs
+    │
+    └── partials
+        ├── answer.ejs
+        ├── messages.ejs
+        └── message_createhack.ejs
+```
 
 ## Installation
 
